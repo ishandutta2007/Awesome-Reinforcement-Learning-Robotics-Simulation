@@ -5,11 +5,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation?style=social&color=white" alt="Repo Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation?style=social&color=white" alt="Repo Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation?color=brightgreen" alt="Issues" /></a>
-  <a href="https://github.com/sindresorhus/awesome"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+  <a href="https://github.com/ishandutta200//Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 ---
@@ -30,6 +32,8 @@ These platforms supply high-throughput multi-physics execution, ray-traced senso
 - [🐙 Open-Source GitHub Projects](#-open-source-github-projects)
   - [🏆 Top Repositories Ranked by GitHub Stars](#-top-repositories-ranked-by-github-stars)
   - [🔬 Recommended Composable Stacks &amp; Framework Selection](#-recommended-composable-stacks--framework-selection)
+- [💖 Support &amp; Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [⚖️ Disclaimer &amp; Sim-to-Real Safety](#️-disclaimer--sim-to-real-safety)
 
@@ -99,6 +103,25 @@ When architecting a production or research pipeline for robotics policy learning
 - 🦾 **Photorealistic Sim-to-Real &amp; Sensor Synthesis:** `NVIDIA Isaac Sim` + `Isaac Lab` + PyTorch. Provides real-time RTX ray-tracing for LiDAR, depth sensors, RGB cameras, and domain randomization.
 - 🤖 **Complete Hardware &amp; ROS 2 System Emulation:** `Gazebo Sim (gz)` or `Webots` paired with `ROS 2 Humble / Iron / Rolling` controllers and Nav2/MoveIt 2.
 - 🏠 **Embodied AI &amp; Vision-Language-Action (VLA) Exploration:** `Hugging Face LeRobot` + `AI Habitat` or `OmniGibson` for training multimodal indoor agents.
+
+---
+
+## 💖 Support &amp; Sponsorship
+
+If this curated repository helps your robotics research, sim-to-real transfer projects, or engineering development, please consider showing your support:
+
+- ⭐ **Star this repository** to help others discover it across the robotics and AI community!
+- 🍴 **Fork and share** the repo with colleagues, research labs, and teams.
+- ☕ **Buy a coffee &amp; support ongoing curation:** You can sponsor our open-source research and ecosystem tracking via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007). Every bit of support is deeply appreciated!
+
+---
+
+## 📈 Star History
+
+## Star History
+
+#[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation&type=date&legend=top-left)
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Reinforcement-Learning-Robotics-Simulation&type=date&legend=top-left)
 
 ---
 
