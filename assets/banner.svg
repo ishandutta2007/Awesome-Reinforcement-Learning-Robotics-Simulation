@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#ff0080" />
+    </linearGradient>
+
+    <linearGradient id="cyberGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.6" />
+    </pattern>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="slightGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      fill: #94a3b8;
+      letter-spacing: 0.2px;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      fill: #e2e8f0;
+    }
+    .tech-pill {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 500;
+      font-size: 11px;
+    }
+
+    /* Ambient Dynamic Pulsing and Wave Animations in Background */
+    @keyframes pulseGlow {
+      0% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.08); }
+      100% { opacity: 0.25; transform: scale(1); }
+    }
+    @keyframes floatOrb1 {
+      0% { transform: translate(0px, 0px); }
+      50% { transform: translate(30px, -20px); }
+      100% { transform: translate(0px, 0px); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0px, 0px); }
+      50% { transform: translate(-35px, 25px); }
+      100% { transform: translate(0px, 0px); }
+    }
+    @keyframes dashCycle {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes sensorSweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .anim-pulse {
+      animation: pulseGlow 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .anim-orb-1 {
+      animation: floatOrb1 8s ease-in-out infinite;
+    }
+    .anim-orb-2 {
+      animation: floatOrb2 10s ease-in-out infinite;
+    }
+    .anim-wire {
+      stroke-dasharray: 8 6;
+      animation: dashCycle 12s linear infinite;
+    }
+    .anim-radar {
+      transform-origin: 1040px 170px;
+      animation: sensorSweep 8s linear infinite;
+    }
+  </style>
+
+  <!-- Deep Background Canvas -->
+  <rect width="1200" height="340" fill="url(#bgGrad)" rx="16" />
+  <rect width="1200" height="340" fill="url(#gridPattern)" rx="16" />
+
+  <!-- DYNAMIC LAYER 1: Ambient Background Glowing Orbs (Behind Foreground) -->
+  <g class="anim-orb-1">
+    <circle cx="150" cy="80" r="140" fill="#00f2fe" opacity="0.1" filter="url(#glowEffect)" />
+    <circle cx="1020" cy="120" r="160" fill="#7928ca" opacity="0.12" filter="url(#glowEffect)" />
+  </g>
+  <g class="anim-orb-2">
+    <circle cx="650" cy="280" r="130" fill="#ff0080" opacity="0.08" filter="url(#glowEffect)" />
+    <circle cx="950" cy="240" r="120" fill="#10b981" opacity="0.09" filter="url(#glowEffect)" />
+  </g>
+
+  <!-- DYNAMIC LAYER 2: Connective Simulation & Telemetry Wave Lines (Background Depth) -->
+  <g opacity="0.4">
+    <!-- Flow Curves -->
+    <path class="anim-wire" d="M -20 220 C 250 140, 400 300, 700 210 C 950 130, 1050 250, 1220 180" fill="none" stroke="url(#primaryGlow)" stroke-width="2" />
+    <path class="anim-wire" d="M -20 270 C 280 200, 520 330, 800 240 C 1000 170, 1100 290, 1220 230" fill="none" stroke="url(#accentGlow)" stroke-width="1.5" />
+    <path d="M 50 40 L 1150 40" stroke="#334155" stroke-width="1" stroke-dasharray="4 6" opacity="0.5" />
+    <path d="M 50 300 L 1150 300" stroke="#334155" stroke-width="1" stroke-dasharray="4 6" opacity="0.5" />
+  </g>
+
+  <!-- DYNAMIC LAYER 3: Interactive Simulation Diagram Elements (Right Flank Graphic) -->
+  <g transform="translate(40, 0)">
+    <!-- Simulated Robot Arm / Multi-Joint Kinematic Rig Graphic -->
+    <g transform="translate(930, 95)" opacity="0.85">
+      <!-- Radar Circle / Sensory Field -->
+      <circle cx="70" cy="75" r="70" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 4" opacity="0.4" />
+      <circle cx="70" cy="75" r="45" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3" />
+      <circle cx="70" cy="75" r="20" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.6" />
+      
+      <!-- Sweep Line -->
+      <line class="anim-radar" x1="70" y1="75" x2="135" y2="75" stroke="url(#primaryGlow)" stroke-width="2" opacity="0.8" />
+
+      <!-- Kinematic Link Segments -->
+      <line x1="20" y1="130" x2="50" y2="85" stroke="#f1f5f9" stroke-width="5" stroke-linecap="round" />
+      <line x1="50" y1="85" x2="95" y2="55" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" />
+      <line x1="95" y1="55" x2="125" y2="75" stroke="#a855f7" stroke-width="3" stroke-linecap="round" />
+      
+      <!-- Joint Articulation Nodes -->
+      <circle cx="20" cy="130" r="7" fill="#0f172a" stroke="#00f2fe" stroke-width="2.5" />
+      <circle cx="50" cy="85" r="6" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="95" cy="55" r="5" fill="#0f172a" stroke="#a855f7" stroke-width="2" />
+      <circle cx="125" cy="75" r="4" fill="#ff0080" />
+
+      <!-- End Effector Gripper Rays -->
+      <line x1="125" y1="75" x2="135" y2="67" stroke="#ff0080" stroke-width="2" stroke-linecap="round" />
+      <line x1="125" y1="75" x2="135" y2="83" stroke="#ff0080" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Coordinate Frame Gimbal Indicator -->
+      <g transform="translate(15, 20)">
+        <line x1="0" y1="0" x2="22" y2="0" stroke="#ef4444" stroke-width="2" stroke-linecap="round" />
+        <line x1="0" y1="0" x2="0" y2="-22" stroke="#22c55e" stroke-width="2" stroke-linecap="round" />
+        <line x1="0" y1="0" x2="-12" y2="12" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" />
+        <text x="26" y="4" font-family="sans-serif" font-size="9" fill="#ef4444" font-weight="700">X</text>
+        <text x="-4" y="-26" font-family="sans-serif" font-size="9" fill="#22c55e" font-weight="700">Y</text>
+        <text x="-24" y="20" font-family="sans-serif" font-size="9" fill="#3b82f6" font-weight="700">Z</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- FOREGROUND LAYER: Pristine Clean Text & Badges (Never Obscured) -->
+  <g transform="translate(70, 0)">
+    
+    <!-- Top Meta Category Tag Pill -->
+    <g transform="translate(0, 52)">
+      <rect width="250" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="14" cy="14" r="5" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="28" y="18" class="badge-text" fill="#38bdf8">ROBOTICS &amp; REINFORCEMENT LEARNING</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="128" class="title-text">
+      Awesome Reinforcement Learning
+    </text>
+    <text x="0" y="172" class="title-text">
+      &amp; <tspan fill="url(#primaryGlow)">Robotics Simulation</tspan> 🤖⚡
+    </text>
+
+    <!-- Subtitle / Mission -->
+    <text x="0" y="212" class="subtitle-text">
+      Curated Physics Engines, GPU-Parallel RL Simulators, Sim-to-Real Stacks &amp; Embodied AI Environments
+    </text>
+
+    <!-- Interactive Technology Feature Badges / Framework Badges -->
+    <g transform="translate(0, 245)">
+      <!-- MuJoCo & MJX -->
+      <g transform="translate(0, 0)">
+        <rect width="125" height="30" rx="6" fill="#1e293b" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.6" />
+        <text x="14" y="19" class="tech-pill" fill="#00f2fe">⚡ MuJoCo / MJX</text>
+      </g>
+
+      <!-- NVIDIA Isaac Lab -->
+      <g transform="translate(135, 0)">
+        <rect width="135" height="30" rx="6" fill="#1e293b" stroke="#76b900" stroke-width="1" stroke-opacity="0.6" />
+        <text x="14" y="19" class="tech-pill" fill="#76b900">🚀 Isaac Sim / Lab</text>
+      </g>
+
+      <!-- Genesis Engine -->
+      <g transform="translate(280, 0)">
+        <rect width="130" height="30" rx="6" fill="#1e293b" stroke="#ec4899" stroke-width="1" stroke-opacity="0.6" />
+        <text x="14" y="19" class="tech-pill" fill="#ec4899">🧬 Genesis Multi-Phy</text>
+      </g>
+
+      <!-- LeRobot & Embodied AI -->
+      <g transform="translate(420, 0)">
+        <rect width="135" height="30" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.6" />
+        <text x="14" y="19" class="tech-pill" fill="#fbbf24">🤗 Hugging Face LeRobot</text>
+      </g>
+
+      <!-- ROS 2 & Gazebo -->
+      <g transform="translate(565, 0)">
+        <rect width="130" height="30" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+        <text x="14" y="19" class="tech-pill" fill="#38bdf8">🌐 ROS 2 &amp; Gazebo</text>
+      </g>
+
+      <!-- Sim-to-Real Hardware -->
+      <g transform="translate(705, 0)">
+        <rect width="120" height="30" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1" stroke-opacity="0.6" />
+        <text x="14" y="19" class="tech-pill" fill="#a855f7">🎯 Sim-to-Real</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Exterior Frame Accent Glow Border -->
+  <rect x="1" y="1" width="1198" height="338" rx="15" fill="none" stroke="#334155" stroke-width="1" />
+  <line x1="250" y1="339" x2="950" y2="339" stroke="url(#primaryGlow)" stroke-width="2" filter="url(#slightGlow)" />
+</svg>
